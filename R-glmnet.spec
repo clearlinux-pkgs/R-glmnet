@@ -4,7 +4,7 @@
 #
 Name     : R-glmnet
 Version  : 1.9
-Release  : 18
+Release  : 19
 URL      : http://cran.r-project.org/src/contrib/glmnet_1.9-8.tar.gz
 Source0  : http://cran.r-project.org/src/contrib/glmnet_1.9-8.tar.gz
 Summary  : and elastic-net regularized generalized linear models
