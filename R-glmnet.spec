@@ -4,7 +4,7 @@
 #
 Name     : R-glmnet
 Version  : 2.0.5
-Release  : 29
+Release  : 30
 URL      : http://cran.r-project.org/src/contrib/glmnet_2.0-5.tar.gz
 Source0  : http://cran.r-project.org/src/contrib/glmnet_2.0-5.tar.gz
 Summary  : Lasso and Elastic-Net Regularized Generalized Linear Models
@@ -33,12 +33,15 @@ lib components for the R-glmnet package.
 %setup -q -c -n glmnet
 
 %build
+export http_proxy=http://127.0.0.1:9/
+export https_proxy=http://127.0.0.1:9/
+export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1489127877
+export SOURCE_DATE_EPOCH=1492797854
 
 %install
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1489127877
+export SOURCE_DATE_EPOCH=1492797854
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -54,7 +57,7 @@ R CMD INSTALL --install-tests --built-timestamp=${SOURCE_DATE_EPOCH} --build  -l
 export LANG=C
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
-export no_proxy=localhost
+export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
 R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library glmnet
 
@@ -66,6 +69,7 @@ R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/lib
 /usr/lib64/R/library/glmnet/INDEX
 /usr/lib64/R/library/glmnet/Meta/Rd.rds
 /usr/lib64/R/library/glmnet/Meta/data.rds
+/usr/lib64/R/library/glmnet/Meta/features.rds
 /usr/lib64/R/library/glmnet/Meta/hsearch.rds
 /usr/lib64/R/library/glmnet/Meta/links.rds
 /usr/lib64/R/library/glmnet/Meta/nsInfo.rds
