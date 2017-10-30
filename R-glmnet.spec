@@ -4,7 +4,7 @@
 #
 Name     : R-glmnet
 Version  : 2.0.13
-Release  : 44
+Release  : 45
 URL      : https://cran.r-project.org/src/contrib/glmnet_2.0-13.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/glmnet_2.0-13.tar.gz
 Summary  : Lasso and Elastic-Net Regularized Generalized Linear Models
