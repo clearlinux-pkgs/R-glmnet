@@ -1,0 +1,14 @@
+# This file contains recursive sources that require this package
+R-DendSer
+R-betareg
+R-caret
+R-dendextend
+R-earth
+R-flexmix
+R-fpc
+R-mi
+R-mvoutlier
+R-plotmo
+R-robCompositions
+R-sem
+R-seriation
