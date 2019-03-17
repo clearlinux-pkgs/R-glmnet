@@ -4,14 +4,13 @@
 #
 Name     : R-glmnet
 Version  : 2.0.16
-Release  : 63
+Release  : 64
 URL      : https://cran.r-project.org/src/contrib/glmnet_2.0-16.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/glmnet_2.0-16.tar.gz
 Summary  : Lasso and Elastic-Net Regularized Generalized Linear Models
 Group    : Development/Tools
 License  : GPL-2.0
 Requires: R-glmnet-lib = %{version}-%{release}
-Requires: R-foreach
 BuildRequires : R-foreach
 BuildRequires : buildreq-R
 BuildRequires : gfortran
@@ -35,10 +34,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1542927349
+export SOURCE_DATE_EPOCH=1552808734
 
 %install
-export SOURCE_DATE_EPOCH=1542927349
+export SOURCE_DATE_EPOCH=1552808734
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -74,8 +73,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library glmnet|| : 
-cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
+R CMD check --no-manual --no-examples --no-codoc  glmnet || :
 
 
 %files
@@ -117,7 +115,6 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 /usr/lib64/R/library/glmnet/help/paths.rds
 /usr/lib64/R/library/glmnet/html/00Index.html
 /usr/lib64/R/library/glmnet/html/R.css
-/usr/lib64/R/library/glmnet/libs/symbols.rds
 /usr/lib64/R/library/glmnet/mortran/glmnet5dp.m
 
 %files lib
