@@ -4,7 +4,7 @@
 #
 Name     : R-glmnet
 Version  : 4.0
-Release  : 79
+Release  : 80
 URL      : https://cran.r-project.org/src/contrib/glmnet_4.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/glmnet_4.0.tar.gz
 Summary  : Lasso and Elastic-Net Regularized Generalized Linear Models
@@ -38,10 +38,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1589487715
+export SOURCE_DATE_EPOCH=1589569068
 
 %install
-export SOURCE_DATE_EPOCH=1589487715
+export SOURCE_DATE_EPOCH=1589569068
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
