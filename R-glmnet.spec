@@ -6,10 +6,10 @@
 # autospec commit: 65cf152
 #
 Name     : R-glmnet
-Version  : 4.1.9
-Release  : 115
-URL      : https://ftp.osuosl.org/pub/cran/src/contrib/glmnet_4.1-9.tar.gz
-Source0  : https://ftp.osuosl.org/pub/cran/src/contrib/glmnet_4.1-9.tar.gz
+Version  : 4.1.10
+Release  : 116
+URL      : https://ftp.osuosl.org/pub/cran/src/contrib/glmnet_4.1-10.tar.gz
+Source0  : https://ftp.osuosl.org/pub/cran/src/contrib/glmnet_4.1-10.tar.gz
 Summary  : Lasso and Elastic-Net Regularized Generalized Linear Models
 Group    : Development/Tools
 License  : GPL-2.0
@@ -53,10 +53,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1748901061
+export SOURCE_DATE_EPOCH=1752763201
 
 %install
-export SOURCE_DATE_EPOCH=1748901061
+export SOURCE_DATE_EPOCH=1752763201
 rm -rf %{buildroot}
 LANG=C.UTF-8
 CFLAGS="$CLEAR_INTERMEDIATE_CFLAGS -O3 -flto -fno-semantic-interposition "
